@@ -36,7 +36,7 @@ export default function TripPlanner() {
 
     try {
       const res = await axios.post(
-        'http://localhost:8000/trip/search',
+        `${process.env.NEXT_PUBLIC_API_URL}/trip/search`,
         query,
         { headers: { Authorization: `Bearer ${token}` } }
       )
