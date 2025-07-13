@@ -19,7 +19,7 @@ export default function MyTrips() {
 
     const fetchTrips = async () => {
       try {
-        const res = await fetch('http://localhost:8000/trip/my-trips', {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/trip/my-trips`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
