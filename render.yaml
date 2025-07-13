@@ -3,9 +3,8 @@ services:
     name: fastapi-backend
     env: python
     plan: free
-    buildCommand: "pip install -r requirements.txt"
+    buildCommand: "cd backend && pip install -r requirements.txt"
     startCommand: "cd backend && uvicorn main:app --host 0.0.0.0 --port 10000"
-
     envVars:
       - key: JWT_SECRET
         sync: false
