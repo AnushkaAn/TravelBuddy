@@ -32,8 +32,10 @@ export default function RecommendationsPage() {
       })
       setTripHistory(tripsRes.data)
     } catch (err) {
+      console.error(err)
       setError('Failed to load trips')
     }
+
   }
 
   const fetchRecommendation = async () => {
