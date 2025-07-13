@@ -86,7 +86,7 @@ export default function MyTrips() {
             </div>
           ) : (
             <div className="text-center py-10">
-              <p className="text-blue-200 text-lg">You haven't saved any trips yet.</p>
+              <p className="text-blue-200 text-lg">You haven&apos; saved any trips yet.</p>
               <button 
                 onClick={() => router.push('/trip')}
                 className="mt-4 px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white transition-colors"
