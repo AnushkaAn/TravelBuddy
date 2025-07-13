@@ -20,12 +20,12 @@ export default function AdminPage() {
       }
 
       try {
-        const usersRes = await axios.get('http://localhost:8000/admin/users', {
+        const usersRes = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/admin/users`, {
           headers: { Authorization: `Bearer ${token}` }
         })
         setUsers(usersRes.data)
 
-        const tripsRes = await axios.get('http://localhost:8000/admin/trips', {
+        const tripsRes = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/admin/trips`, {
           headers: { Authorization: `Bearer ${token}` }
         })
         setTrips(tripsRes.data)
