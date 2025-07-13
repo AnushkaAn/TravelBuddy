@@ -24,7 +24,7 @@ export default function RecommendationsPage() {
     }
 
     try {
-      const tripsRes = await axios.get('http://localhost:8000/trip/my-trips', {
+      const tripsRes = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/trip/my-trips`, {
         headers: { Authorization: `Bearer ${token}` }
       })
       setTripHistory(tripsRes.data)
@@ -37,7 +37,7 @@ export default function RecommendationsPage() {
     const token = localStorage.getItem('token')
     try {
       const recRes = await axios.post(
-        'http://localhost:8000/recommend',
+        `${process.env.NEXT_PUBLIC_API_URL}/recommend`,
         { prompt: customPrompt },
         { headers: { Authorization: `Bearer ${token}` } }
       )
