@@ -107,7 +107,7 @@ export default function LoginPage() {
           </motion.p>
         )}
         <div className="mt-6 text-center text-blue-200">
-          Don't have an account?{' '}
+          Don&apos;t have an account?{' '}
           <a 
             href="/register" 
             className="text-blue-300 hover:text-blue-400 font-medium transition-colors"
