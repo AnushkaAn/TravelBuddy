@@ -1,4 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 
 'use client'
 
@@ -21,7 +21,7 @@ export default function Navbar() {
       try {
         const payload = JSON.parse(atob(token.split('.')[1]))
         setIsAdmin(payload.role === 'admin' || payload.is_admin)
-      } catch (error) {
+      } catch {
         setIsAdmin(false)
       }
     }
