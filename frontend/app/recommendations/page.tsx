@@ -16,7 +16,7 @@ export default function RecommendationsPage() {
   const [customPrompt, setCustomPrompt] = useState('')
   const [tripHistory, setTripHistory] = useState([])
   const [loading, setLoading] = useState(true)
- 
+  const [error, setError] = useState('');
   const router = useRouter()
 
   const fetchTrips = async () => {
