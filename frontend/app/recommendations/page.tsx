@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-
+/* eslint-disable react-hooks/exhaustive-deps */
 
 'use client'
 
@@ -16,7 +16,7 @@ export default function RecommendationsPage() {
   const [customPrompt, setCustomPrompt] = useState('')
   const [tripHistory, setTripHistory] = useState([])
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState('');
+  const [error, setError] = useState('')
   const router = useRouter()
 
   const fetchTrips = async () => {
@@ -35,7 +35,6 @@ export default function RecommendationsPage() {
       console.error(err)
       setError('Failed to load trips')
     }
-
   }
 
   const fetchRecommendation = async () => {
@@ -58,9 +57,11 @@ export default function RecommendationsPage() {
   }, [])
 
   if (loading) {
-    return <div className="min-h-screen flex items-center justify-center">
-      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500" />
-    </div>
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500" />
+      </div>
+    )
   }
 
   return (
@@ -89,10 +90,17 @@ export default function RecommendationsPage() {
                 className="w-full bg-blue-950 border border-blue-800 p-2 rounded mb-4 text-white"
                 rows={4}
               />
-              <Button onClick={fetchRecommendation} className="mb-6">Generate</Button>
-              <div className="prose prose-invert whitespace-pre-wrap">
+              <Button onClick={fetchRecommendation} className="mb-6">
+                Generate
+              </Button>
+              <div className="prose prose-invert whitespace-pre-wrap mb-4">
                 {recommendations || 'No recommendation yet.'}
               </div>
+              {error && (
+                <p className="text-red-400 text-sm text-center">
+                  {error}
+                </p>
+              )}
             </Card>
           </TabsContent>
 
