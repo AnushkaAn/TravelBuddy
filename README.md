@@ -28,7 +28,11 @@ An AI-powered full-stack travel assistant that helps users plan trips with perso
 
 ## 📸 Screenshots
 
-Coming soon...
+<img width="1919" height="839" alt="image" src="https://github.com/user-attachments/assets/640e66cc-6418-4a4a-92ce-853698fb3ea7" />
+<img width="1919" height="830" alt="Screenshot 2025-07-23 221326" src="https://github.com/user-attachments/assets/139ddb11-93b2-4773-a999-e13509d47d2c" />
+<img width="1919" height="837" alt="Screenshot 2025-07-23 221100" src="https://github.com/user-attachments/assets/1d957b48-5f83-445f-b022-bf12ca457f1f" />
 
-## 📁 Project Structure
+
+
+
 
